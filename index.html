@@ -26,8 +26,8 @@
       function showInfo(data) {
         // data comes through as a simple array since simpleSheet is turned on
         document.getElementById("food").innerHTML = 
-        	"<strong>Foods:</strong> " + 
-        	[ data[0].tweet, data[0].tweet1, ].join(" and ");
+        	"<strong>text:<br></strong> " + 
+        	[ data[0].text1, data[1].text2, data[0].text3, ].join(" <br> ");
         console.log(data);
       }
 
