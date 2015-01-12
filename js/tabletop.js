@@ -20,7 +20,7 @@
       }
     }
   } catch (e) { }
-
+  
   // Create a simple indexOf function for support
   // of older browsers.  Uses native indexOf if 
   // available.  Code similar to underscores.
