@@ -6,37 +6,35 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="logo.png" type="image/x-icon">
+	<script src="js/tabletop.js"></script>
     <title>GCC TRENDS</title>
   </head>
   <body>
     <!-- HTML -->
     <div class="container">
       
+	<p id="food"></p>
+	Source Sheet: <a target="_new" href="">link</a>
+    <script type="text/javascript">
+      window.onload = function() { init() };
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1W-sBySK9LmuNHQRL4ieO7ZFUZdq4dxs8D5REvb7EXzU/pubhtml';
 
-      <div class="bio">
-        <h1>GCC TRENDS</h1>
-		<br><br><br>
-      </div>
+      function init() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         simpleSheet: true } );
+      }
 
-      <article id="tweet"><span class="load flash animated">LOADING...</span></article>
+      function showInfo(data) {
+        // data comes through as a simple array since simpleSheet is turned on
+        document.getElementById("food").innerHTML = 
+        	"<strong>Foods:</strong> " + 
+        	[ data[0].tweet, data[1].tweet1, data[2].name ].join(", ");
+        console.log(data);
+      }
 
-    </div>
-
-    <!-- Templates -->
-    <script id="tweet" type="text/html">
-      {{#rows}}
-        <p> {{{tweet}}} </p>
-      {{/rows}}
     </script>
-	
-    <!-- JavaScript -->
-      <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-          var URL2 = 'https://docs.google.com/spreadsheets/d/1W-sBySK9LmuNHQRL4ieO7ZFUZdq4dxs8D5REvb7EXzU/pubhtml' // tweet
-          Tabletop.init({ key: URL,  callback: buildInsta,  simpleSheet: true })
-        })
-      </script>
-
+    
 	 	  
 	  
   </body>
