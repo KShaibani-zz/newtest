@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
+    <script type="text/javascript" src="js/sheetsee.js"></script>
+    <script type="text/javascript" src="js/socialbits.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <title>GCC TRENDS</title>
+  </head>
+  <body>
+    <!-- HTML -->
+    <div class="container">
+      
+
+      <div class="bio">
+        <h1>GCC TRENDS</h1>
+		<br><br><br>
+      </div>
+
+      <article id="tweet"><span class="load flash animated">LOADING...</span></article>
+
+    </div>
+
+    <!-- Templates -->
+    <script id="tweet" type="text/html">
+      {{#rows}}
+        <p><span class="quote">&ldquo;</span> {{{tweet}}} <span class="quote"> &rdquo;</span></p>
+      {{/rows}}
+    </script>
+	
+    <!-- JavaScript -->
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+          var URL2 = 'https://docs.google.com/spreadsheets/d/1W-sBySK9LmuNHQRL4ieO7ZFUZdq4dxs8D5REvb7EXzU/pubhtml' // tweet
+          Tabletop.init({ key: URL,  callback: buildInsta,  simpleSheet: true })
+        })
+      </script>
+
+	 	  
+	  
+  </body>
+</html>
