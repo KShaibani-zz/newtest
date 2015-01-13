@@ -1,25 +1,6 @@
 body {font-family: Calibri; text-align: center; line-height: 1.3em; color: #2C3E50; background-color: #e74c3c; margin: 0;}
 a {color: #17FFE4; text-decoration: none; }
 
-@media only screen and (max-device-width: 480px) {
-     body {
-          padding: 10px !important;
-     }
-    .container {
-          padding: 0px 10px 5px 10px !important;
-     }
-     .header {
-          font-size: 16px !important;
-     }
-     .headline {
-          font-size: 20px !important;
-     }
-     #screenshot_image {
-          width: 275px;
-          height: 190px;
-     }
-}
-
 
 h1 {
 letter-spacing: 0em;
@@ -35,11 +16,11 @@ p {font-size: 23px; line-height: 1.3em;}
 
 .bio {padding-top: 20; }
 .T {padding-bottom: 50; padding-top: 0px;}
-.container {width: 400px; margin: 0 auto; overflow: auto; }
+.container {width: auto; margin: 0 auto; overflow: auto; }
 .quote {font-weight: 900; font-size: 18px;}
-.container1 {width: 400px; margin: -10px 0px -12px 0px; overflow: visible; }
-.container2 {width: 400px; margin-bottom: -13px; margin-top: 43px;  white-space: nowrap;
-width: 400px;
+.container1 {width: auto; margin: -10px 0px -12px 0px; overflow: visible; }
+.container2 {width: auto; margin-bottom: -13px; margin-top: 43px;  white-space: nowrap;
+width: auto;
 overflow: hidden;
 text-overflow: ellipsis;
 }
