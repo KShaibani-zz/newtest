@@ -1,9 +1,28 @@
 body {font-family: Calibri; text-align: center; line-height: 1.3em; color: #2C3E50; background-color: #e74c3c; margin: 0;}
 a {color: #17FFE4; text-decoration: none; }
 
+@media only screen and (max-device-width: 480px) {
+     body {
+          padding: 10px !important;
+     }
+    .container {
+          padding: 0px 10px 5px 10px !important;
+     }
+     .header {
+          font-size: 16px !important;
+     }
+     .headline {
+          font-size: 20px !important;
+     }
+     #screenshot_image {
+          width: 275px;
+          height: 190px;
+     }
+}
+
 
 h1 {
-letter-spacing: 0em;
+letter-spacing: 1.5em;
 font-weight: 900;
 font-size: 30px;
 font-family: Playfair Display;
@@ -16,41 +35,16 @@ p {font-size: 23px; line-height: 1.3em;}
 
 .bio {padding-top: 20; }
 .T {padding-bottom: 50; padding-top: 0px;}
-.container {width: auto; margin: 0 auto; overflow: auto; }
+.container {width: 700px; margin: 0 auto; overflow: auto; }
 .quote {font-weight: 900; font-size: 18px;}
-.container1 {width: auto; margin: -10px 0px -12px 0px; overflow: visible; }
-.container2 {width: auto; margin-bottom: -13px; margin-top: 43px;  white-space: nowrap;
-width: auto;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-
-#ttt  { margin: 50px }
-
-
-#views p {font-weight: 200; font-size: 18px;}
-#views p a {color: #777; font-weight: 200; text-decoration: underline;}
-#views p a:hover{color: #17FFE4;}
-#views {padding: 3px; margin: 13px auto; margin-top: 0px; background: #F7F7F7; border-radius: 30px; color: #777;}
-
-#text1 p {font-weight: 200; font-size: 18px;}
-#text1 p a {color: #777; font-weight: 200; text-decoration: underline;}
-#text1 p a:hover {color: #17FFE4;}
-#text1 {padding: 8px; margin: 29px 0 -30px; margin-top: -4px; background: #F7F7F7; border-radius: 0px; color: #777;}
-
-
-
-#text p {font-weight: 200; font-size: 18px;}
-#text p a {color: #777; font-weight: 200; text-decoration: underline;}
-#text p a:hover {color: #17FFE4;}
-#text {padding: 3px; margin: -14px 0px -13px; margin-top: -4px; background: #F7F7F7; border-radius: 0px; color: #777;}
-#text2 p {font-weight: 200; font-size: 18px;}
-#text2 p a {color: #777; font-weight: 200; text-decoration: underline;}
-#text2 p a:hover {color: #17FFE4;}
-#text2 {padding: 0px 0px 16px 0px; margin:  0px ; margin-top: 30px; background: #2C3E50; border-radius: 0px; color: #777;}
-
-
-
+#tweet p {font-weight: 200; font-size: 18px;}
+#tweet p a {color: #777; font-weight: 200; text-decoration: underline;}
+#tweet p a:hover {color: #17FFE4;}
+#tweet {padding: 2px; margin: 0 auto; margin-top: 50px; background: #F7F7F7; border-radius: 20px; color: #777;}
+#tweet1 p {font-weight: 200; font-size: 18px;}
+#tweet1 p a {color: #777; font-weight: 200; text-decoration: underline;}
+#tweet1 p a:hover {color: #17FFE4;}
+#tweet1 {padding: 2px; margin: 0 auto; margin-top: 50px; background: #F7F7F7; border-radius: 20px; color: #777;}
 .meta {font-family: Courier New; text-transform: uppercase; font-size: 10px;}
 .load {color: #17FFE4; letter-spacing: .3em; font-size: 13px; }
 .inline-list {list-style: none; margin: 0; padding: 0;}
@@ -87,3 +81,4 @@ Licensed under the MIT license
 }
 
 .flash {-webkit-animation-name: flash; animation-name: flash;}
+
