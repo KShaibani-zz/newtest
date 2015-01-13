@@ -1,65 +1,94 @@
-<!DOCTYPE html>
-<html>
+body {font-family: Calibri; text-align: center; line-height: 1.3em; color: #2C3E50; background-color: #e74c3c; margin: 0;}
+a {color: #17FFE4; text-decoration: none; }
 
-  <head>
-  <br>
-  <meta charset="utf-8">
-    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
 
-  </head>
-  <body>
-  <div class="container">
-    <h1> v i d e o s </h1>
-    <div id="content"></div>
-    
-	
-    <script id="cat-template" type="text/x-handlebars-template">
-      <div class="entry">
-        <h2>{{event}}</h2>
-		<div class="container2">
-		        <a id="views" >{{text1}}</a>
-				</div>
-				<h2 id="text1"> <h2>
-        <h3 id="text2"> <br> <a> <a href="{{text3}}"> <img src="{{text2}}" style="width:380px;height:285px" </a> <br>  </h3>
-		<div class="container1">
-		        <a id="views" > عدد المشاهدات : {{text4}} </a>
-				</div>
-				
-		<h2 id="text"> <h2>
-        <div class="body">
-          {{blurb}}
-        </div>
-      </div>
-    </script>
 
-    <!-- Don't need jQuery for Tabletop, but using it for this example -->
-    <script type="text/javascript" src="js/handlebars.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/tabletop.js"></script>
-    <script type="text/javascript">
-      var url = 'https://docs.google.com/spreadsheets/d/1W-sBySK9LmuNHQRL4ieO7ZFUZdq4dxs8D5REvb7EXzU/pubhtml';
+#entry { float: left; }
 
-      $(document).ready( function() {
-        Tabletop.init( { key: url,
-                         callback: showInfo,
-                         parseNumbers: true } );
-      });
-        
-      function showInfo(data, tabletop) {
-        var source   = $("#cat-template").html();
-        var template = Handlebars.compile(source);
 
-        $.each( tabletop.sheets("dataa").all(), function(i, cat) {
-          var html = template(cat);
-          $("#content").append(html);
-        });
-      }
-    
-      document.write("___________________");    
-    </script>
-	<article>by : <a href="https://twitter.com/KShaibani">@kshaibani</a> </article>
-	<br>
-	
-  </body>
- 
-</html>
+
+h1 {
+letter-spacing: 0em;
+font-weight: 900;
+font-size: 30px;
+font-family: Playfair Display;
+padding: 0 20px 20px 20px;
+margin-top: 0;
+border-bottom: 1px solid #333;
+margin-bottom: 5px;}
+
+p {font-size: 23px; line-height: 1.3em;}
+
+.bio {padding-top: 20; }
+.T {padding-bottom: 50; padding-top: 0px;}
+.container {width: 400px; margin: 0 auto; overflow: auto; }
+.quote {font-weight: 900; font-size: 18px;}
+.container1 {width: 400px; margin: -10px 0px -12px 0px; overflow: visible; }
+.container2 {width: 400px; margin-bottom: -13px; margin-top: 43px;  white-space: nowrap;
+width: 400px;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+#ttt  { margin: 50px }
+
+
+#views p {font-weight: 200; font-size: 18px;}
+#views p a {color: #777; font-weight: 200; text-decoration: underline;}
+#views p a:hover{color: #17FFE4;}
+#views {padding: 3px; margin: 13px auto; margin-top: 0px; background: #F7F7F7; border-radius: 30px; color: #777;}
+
+#text1 p {font-weight: 200; font-size: 18px;}
+#text1 p a {color: #777; font-weight: 200; text-decoration: underline;}
+#text1 p a:hover {color: #17FFE4;}
+#text1 {padding: 8px; margin: 29px 0 -30px; margin-top: -4px; background: #F7F7F7; border-radius: 0px; color: #777;}
+
+
+
+#text p {font-weight: 200; font-size: 18px;}
+#text p a {color: #777; font-weight: 200; text-decoration: underline;}
+#text p a:hover {color: #17FFE4;}
+#text {padding: 3px; margin: -14px 0px -13px; margin-top: -4px; background: #F7F7F7; border-radius: 0px; color: #777;}
+#text2 p {font-weight: 200; font-size: 18px;}
+#text2 p a {color: #777; font-weight: 200; text-decoration: underline;}
+#text2 p a:hover {color: #17FFE4;}
+#text2 {padding: 0px 0px 16px 0px; margin:  0px ; margin-top: 30px; background: #2C3E50; border-radius: 0px; color: #777;}
+
+
+
+.meta {font-family: Courier New; text-transform: uppercase; font-size: 10px;}
+.load {color: #17FFE4; letter-spacing: .3em; font-size: 13px; }
+.inline-list {list-style: none; margin: 0; padding: 0;}
+.inline-list li {display: inline-block; }
+.inline-list li {padding-left: 20px;}
+.inline-list li a {padding: 2px 8px; border: 1px solid #96EBE1; border-radius: 2px; letter-spacing: .1em; text-transform: uppercase; font-weight: 400; font-size: 14px;}
+.inline-list li a:hover {background: #96EBE1; color: #fff;}
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+*/
+
+.animated {-webkit-animation: 1s infinite; animation: 1s infinite; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {-webkit-animation-name: flash; animation-name: flash;}
