@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="js/tabletop.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="logo.png" type="image/x-icon">
-    <title>GCC TRENDS</title>
+  <br>
+  <meta charset="utf-8">
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+
   </head>
   <body>
-    <!-- HTML -->
-    <div class="container">
-      
-	<p id="food"></p>
-	Source: <a target="_new" href="">WIP</a>
-    <script type="text/javascript">
-      window.onload = function() { init() };
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1W-sBySK9LmuNHQRL4ieO7ZFUZdq4dxs8D5REvb7EXzU/pubhtml';
-
-      function init() {
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: showInfo,
-                         simpleSheet: true } );
-      }
-
-      function showInfo(data) {
-        // data comes through as a simple array since simpleSheet is turned on
-        document.getElementById("food").innerHTML = 
-        	"<strong>text:<br></strong> " + 
-        	[ data[0].text1, data[1].text2, data[0].text3, ].join(" <br> ");
-        console.log(data);
-      }
-
-    </script>
+  <div class="container">
+    <h1> G C C t r e n d s </h1>
     
-	 	  
-	  
+    <div id="content"></div>
+    
+    <script id="cat-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <h2>{{event}}</h2>
+		<div class="container2">
+		        <a id="views" >{{text1}}</a>
+				</div>
+				<h2 id="text1"> <h2>
+        <h3 id="text2"> <br> <a> <a href="{{text3}}"> <img src="{{text2}}" style="width:380px;height:285px" </a> <br>  </h3>
+		<div class="container1">
+		        <a id="views" > عدد المشاهدات : {{text4}} </a>
+				</div>
+				
+		<h2 id="text"> <h2>
+        <div class="body">
+          {{blurb}}
+        </div>
+      </div>
+    </script>
+
+    <!-- Don't need jQuery for Tabletop, but using it for this example -->
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tabletop.js"></script>
+    <script type="text/javascript">
+      var url = 'https://docs.google.com/spreadsheets/d/1W-sBySK9LmuNHQRL4ieO7ZFUZdq4dxs8D5REvb7EXzU/pubhtml';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: url,
+                         callback: showInfo,
+                         parseNumbers: true } );
+      });
+        
+      function showInfo(data, tabletop) {
+        var source   = $("#cat-template").html();
+        var template = Handlebars.compile(source);
+
+        $.each( tabletop.sheets("dataa").all(), function(i, cat) {
+          var html = template(cat);
+          $("#content").append(html);
+        });
+      }
+    
+      document.write("___________________");    
+    </script>
+	<article>by : <a href="https://twitter.com/KShaibani">@kshaibani</a> </article>
+	<br>
+	
   </body>
+ 
 </html>
