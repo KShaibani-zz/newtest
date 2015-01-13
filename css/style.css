@@ -52,8 +52,18 @@ text-overflow: ellipsis;
 #text2 p {font-weight: 200; font-size: 18px;}
 #text2 p a {color: #777; font-weight: 200; text-decoration: underline;}
 #text2 p a:hover {color: #17FFE4;}
-#text2 {padding: 0px 0px 16px 0px; margin:  0px ; margin-top: 30px; background: #2C3E50; border-radius: 0px; color: #777;}
+#text2 {padding: 0px 0px 16px 0px; margin:  0px ; margin-top: 30px; background: #e74c3c; border-radius: 0px; color: #777;}
 
+
+#text4 p {font-weight: 200; font-size: 18px;}
+#text4 p a {color: #777; font-weight: 200; text-decoration: underline;}
+#text4 p a:hover {color: #17FFE4;}
+#text4 {padding: 0px; margin: 22px 0px -0px 0px; height: 327px; width: 1px; float: none; position: absolute; background: #F7F7F7; border-radius: 0px; color: #777;}
+
+#text5 p {font-weight: 200; font-size: 18px;}
+#text5 p a {color: #777; font-weight: 200; text-decoration: underline;}
+#text5 p a:hover {color: #17FFE4;}
+#text5 {padding: 0px; margin: 22px 0px 0px 399px; height: 327px; width: 1px; float: none; position: absolute; background: #F7F7F7; border-radius: 0px; color: #777;}
 
 
 .meta {font-family: Courier New; text-transform: uppercase; font-size: 10px;}
