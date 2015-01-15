@@ -17,6 +17,15 @@ a {color: #17FFE4; text-decoration: none; }
 
 .grid {margin: 6% 0% 0% 10%;}
 
+
+#tableg{
+
+margin-left: auto; margin-right: auto;
+width: 100%;
+
+}
+
+
 #text2 {
 background: none ;
     display: inline-block;
