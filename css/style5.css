@@ -44,11 +44,15 @@ background: none ;
  }
  
  
-#forinfo {
-text-align:center;
-padding:0px;
-margin:0px;
-}
+#forinfo p {font-weight: 200; font-size: 6px;}
+#forinfo p a {color: #777; font-weight: 200; text-decoration: underline;}
+#forinfo p a:hover {color: #17FFE4;}
+#forinfo {padding: 18px 0px 0px 0px; margin: 0px 0px 0px 6%;
+ height: 36px; width: 1381px; float: left; position: relative;
+ background: #101010; border-radius: 3px; color: #777; z-index: 43;
+ text-align: center;
+ display: block;
+ }
  
  
 #vname p {font-weight: 200; font-size: 6px;}
